@@ -1,0 +1,70 @@
+bmanmi
+GIT
+Marbyvagen241!	
+anthony.mitton@tuni.fi
+Version control in a nutshell¶
+Version control consists of:
+
+Versioning – Making different versions of files.
+Identifying versions – Versions have unique identities/keys that can be used to access different versions.
+Identifying changes between versions – Identifying what changes were made and by who.
+Saving and loading of versions – Created versions can be stored long-term and aren’t discarded when the system shuts down.
+Version control allows:
+
+Saving different production phases
+Easier updates for the software
+Distribution and release of source code
+Teamwork
+Parallel development of different components
+Development branching
+Development tracking and reporting
+Overall safer development
+
+Versions in Git are based on the contents of the worktree. Worktree consists of files and directories that start from the project’s root-directory with the exception of git-directory which contains the data of the repository.
+
+A version in Git is known as commit. A commit stores a whole version of a file only on the first save or if the file has been heavily modified. Later commits only store line changes that have been made since the previous commmit. This allows reconstruction of the worktree by simply following the chain of commits.
+
+Commit consists of the following data:
+
+Who made the commit-	
+User specified name and email
+Timestamp	   -    
+Date and time when the commit is created.
+Message	           -    
+User’s description of it’s contents
+Reference to previous commit -	
+Reference to a version of worktree which is modified in current commit.
+Blob- and tree-objects -	
+What changes were done to files (blob) and where are the files located (tree).
+SHA-1 hash          -	
+The unique identifier of the commit that can be referred to.
+
+Git commands
+Git has more functionalities than commands. 
+Commands are overloaded which means that their functions can be altered with different parameters.
+
+GUIs separate these functionalities to own UI-elements, but command line uses switches.
+
+examples:
+git add <path> 
+adds paths content to index
+git add --all 
+adds all content to index
+git add -p <path> s
+tarts interactive addition to index based on path’s content
+
+Files have four main states 
+commited, modified, staged and untracked:
+
+* Committed - 
+The files current state is stored in previous commit.
+
+* Modified - 
+The file has changes that aren't stored
+
+* Staged - 
+The file has changes and the changes are staged to index.
+
+* Untracked - 
+The file is created but it's not versioned or staged.
+
